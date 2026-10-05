@@ -16,7 +16,7 @@ in closed form or planted on purpose.
 | [Monocular depth](projects/monocular-depth/) | learned | the alignment protocol moves delta<1.25 from 0.461 to 0.911 on identical predictions |
 | [Point-cloud part segmentation](projects/point-cloud-segmentation/) | learned | rare categories average 0.7016 IoU against 0.8249 for common ones |
 | [Novel-view synthesis](projects/mesh-or-novel-view/) | learned | 16.78M of 16.79M parameters are the hash table; train views beat held-out by 5.357 dB |
-| [Volumetric segmentation](projects/volumetric-segmentation/) | learned | 3D U-Net on BraTS - re-running with a larger test split |
+| [Volumetric segmentation](projects/volumetric-segmentation/) | learned | whole-tumour Dice 0.8734 hides enhancing Dice of exactly 0.0000 on 6 of 55 patients |
 
 ## Why both kinds live here
 

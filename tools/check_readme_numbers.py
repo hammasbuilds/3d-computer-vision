@@ -88,6 +88,9 @@ def readme_numbers(text):
         line = re.sub(r"!\[[^\]]*\]\([^)]*\)", " ", line)    # images
         line = re.sub(r"\]\([^)]*\)", "] ", line)            # link targets
         line = re.sub(r"`[^`]*`", " ", line)                 # inline code
+        # "9,555" is one number, not a 9 and a 555. Without this the tokeniser emitted
+        # both halves as unmatched and buried the genuine misses in noise.
+        line = re.sub(r"(?<=\d),(?=\d\d\d(?!\d))", "", line)
         for m in NUM.finditer(line):
             out.append((m.group(), line.strip()))
     return out
@@ -98,8 +101,17 @@ def main(argv):
         print(__doc__)
         return 2
     proj = os.path.abspath(argv[1])
-    res = json.load(io.open(os.path.join(proj, "results", "results.json"),
-                            encoding="utf-8"))
+    # results.json sits at the project root in some projects and under results/ in
+    # others. This used to hardcode results/, so the four root-level projects raised
+    # FileNotFoundError and were silently never checked - which is the failure this
+    # whole script exists to prevent.
+    cands = [os.path.join(proj, "results", "results.json"),
+             os.path.join(proj, "results.json")]
+    found = next((p for p in cands if os.path.exists(p)), None)
+    if not found:
+        print(f"no results.json under {proj} (looked in results/ and the root)")
+        return 2
+    res = json.load(io.open(found, encoding="utf-8"))
     values = sorted(set(walk(res)))
     allow_path = os.path.join(proj, "readme_numbers_allow.txt")
     allow = set()
@@ -125,7 +137,8 @@ def main(argv):
     if bad:
         print(f"{name}: {len(bad)} of {n} numbers are NOT in results.json")
         for tok, line in bad:
-            print(f"  {tok:>12}   {line[:96]}")
+            safe = line[:96].encode("ascii", "replace").decode("ascii")
+            print(f"  {tok:>12}   {safe}")
         return 1
     print(f"{name}: all {n} README numbers are backed by results.json "
           f"({precise} of them quoted to 2+ decimals, so matched on their full "

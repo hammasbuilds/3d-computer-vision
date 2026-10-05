@@ -366,5 +366,30 @@
    "val_class_miou": 0.7774049962678697,
    "best": true
   }
- ]
+ ],
+ "derived_locally": {
+  "note": "arithmetic on test.per_category and test.per_category_n in this same file",
+  "instance_minus_class_miou": 0.0552,
+  "rare_categories_threshold_n_shapes": 60,
+  "rare_categories": [
+   "Bag",
+   "Cap",
+   "Earphone",
+   "Motorbike",
+   "Mug",
+   "Pistol",
+   "Rocket",
+   "Skateboard"
+  ],
+  "rare_mean_miou": 0.7016,
+  "common_categories_threshold_n_shapes": 200,
+  "common_categories": [
+   "Airplane",
+   "Chair",
+   "Lamp",
+   "Table"
+  ],
+  "common_mean_miou": 0.8249,
+  "common_minus_rare_miou": 0.1233
+ }
 }

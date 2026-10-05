@@ -129,5 +129,10 @@
    "train_batch_psnr": 32.173,
    "seconds": 10078.9
   }
- ]
+ ],
+ "derived_locally": {
+  "note": "arithmetic on values stored in this same file; recorded so the README's claims are backed by the record",
+  "train_view_minus_held_out_psnr_db": 5.357,
+  "held_out_psnr_range_db": 15.309
+ }
 }

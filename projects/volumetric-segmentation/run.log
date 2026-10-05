@@ -1,0 +1,181 @@
+[{"stream_name":"stderr","time":6.517650452,"data":"/usr/local/lib/python3.13/dist-packages/nbformat/validator.py:434: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":6.517707896,"data":"  _validate(nbdict, ref, version, version_minor, relax_add_props)\n"}
+,{"stream_name":"stderr","time":7.461795442,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.461839149,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.4618456349999995,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.461850872,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":8.131150854,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.131186659,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.131190285,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.131193134,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":12.436425776,"data":"2 directories with files (depth \u003c= 3)\n"}
+,{"stream_name":"stdout","time":12.436469824,"data":"\n"}
+,{"stream_name":"stdout","time":12.436474499,"data":"  /kaggle/input/brats20-dataset-training-validation/BraTS2020_TrainingData/MICCAI_BraTS2020_TrainingData\n"}
+,{"stream_name":"stdout","time":12.436477742,"data":"      .csv:2\n"}
+,{"stream_name":"stdout","time":12.43648038,"data":"  /kaggle/input/brats20-dataset-training-validation/BraTS2020_ValidationData/MICCAI_BraTS2020_ValidationData\n"}
+,{"stream_name":"stdout","time":12.436483423,"data":"      .csv:2\n"}
+,{"stream_name":"stdout","time":13.63814287,"data":"\n"}
+,{"stream_name":"stdout","time":13.63818925,"data":"2345 NIfTI volumes found\n"}
+,{"stream_name":"stdout","time":13.638195046,"data":"    brats20-dataset-training-validation/BraTS2020_TrainingData/MICCAI_BraTS2020_TrainingData/BraTS20_Training_001/BraTS20_Training_001_flair.nii\n"}
+,{"stream_name":"stdout","time":13.638200052,"data":"    brats20-dataset-training-validation/BraTS2020_TrainingData/MICCAI_BraTS2020_TrainingData/BraTS20_Training_001/BraTS20_Training_001_seg.nii\n"}
+,{"stream_name":"stdout","time":13.638205306,"data":"    brats20-dataset-training-validation/BraTS2020_TrainingData/MICCAI_BraTS2020_TrainingData/BraTS20_Training_001/BraTS20_Training_001_t1.nii\n"}
+,{"stream_name":"stdout","time":13.638209836,"data":"    brats20-dataset-training-validation/BraTS2020_TrainingData/MICCAI_BraTS2020_TrainingData/BraTS20_Training_001/BraTS20_Training_001_t1ce.nii\n"}
+,{"stream_name":"stdout","time":13.638214823,"data":"    brats20-dataset-training-validation/BraTS2020_TrainingData/MICCAI_BraTS2020_TrainingData/BraTS20_Training_001/BraTS20_Training_001_t2.nii\n"}
+,{"stream_name":"stdout","time":13.638219225,"data":"    brats20-dataset-training-validation/BraTS2020_TrainingData/MICCAI_BraTS2020_TrainingData/BraTS20_Training_002/BraTS20_Training_002_flair.nii\n"}
+,{"stream_name":"stdout","time":13.638223964,"data":"    brats20-dataset-training-validation/BraTS2020_TrainingData/MICCAI_BraTS2020_TrainingData/BraTS20_Training_002/BraTS20_Training_002_seg.nii\n"}
+,{"stream_name":"stdout","time":13.638247164,"data":"    brats20-dataset-training-validation/BraTS2020_TrainingData/MICCAI_BraTS2020_TrainingData/BraTS20_Training_002/BraTS20_Training_002_t1.nii\n"}
+,{"stream_name":"stdout","time":13.6688852,"data":"494 cases parsed, 368 with a segmentation + \u003e=1 modality\n"}
+,{"stream_name":"stdout","time":13.668918944,"data":"\n"}
+,{"stream_name":"stdout","time":13.668924878,"data":"example case brats20_training_001:\n"}
+,{"stream_name":"stdout","time":13.668928961,"data":"   flair  brats20-dataset-training-validation/BraTS2020_TrainingData/MICCAI_BraTS2020_TrainingData/BraTS20_Training_001/BraTS20_Training_001_flair.nii\n"}
+,{"stream_name":"stdout","time":13.668933293,"data":"   seg    brats20-dataset-training-validation/BraTS2020_TrainingData/MICCAI_BraTS2020_TrainingData/BraTS20_Training_001/BraTS20_Training_001_seg.nii\n"}
+,{"stream_name":"stdout","time":13.668938103,"data":"   t1     brats20-dataset-training-validation/BraTS2020_TrainingData/MICCAI_BraTS2020_TrainingData/BraTS20_Training_001/BraTS20_Training_001_t1.nii\n"}
+,{"stream_name":"stdout","time":13.668942621,"data":"   t1ce   brats20-dataset-training-validation/BraTS2020_TrainingData/MICCAI_BraTS2020_TrainingData/BraTS20_Training_001/BraTS20_Training_001_t1ce.nii\n"}
+,{"stream_name":"stdout","time":13.668947352,"data":"   t2     brats20-dataset-training-validation/BraTS2020_TrainingData/MICCAI_BraTS2020_TrainingData/BraTS20_Training_001/BraTS20_Training_001_t2.nii\n"}
+,{"stream_name":"stdout","time":13.668951746,"data":"\n"}
+,{"stream_name":"stdout","time":13.668955584999999,"data":"modalities present on all cases: ['flair', 't1ce', 't2', 't1']\n"}
+,{"stream_name":"stdout","time":112.48206254,"data":"  50/368  98s\n"}
+,{"stream_name":"stdout","time":203.244206574,"data":"  100/368  188s\n"}
+,{"stream_name":"stdout","time":294.905598399,"data":"  150/368  280s\n"}
+,{"stream_name":"stdout","time":384.654235225,"data":"  200/368  370s\n"}
+,{"stream_name":"stdout","time":479.545900322,"data":"  250/368  465s\n"}
+,{"stream_name":"stdout","time":570.377614465,"data":"  300/368  556s\n"}
+,{"stream_name":"stdout","time":683.574147122,"data":"  350/368  669s\n"}
+,{"stream_name":"stdout","time":738.061022541,"data":"\n"}
+,{"stream_name":"stdout","time":738.061061594,"data":"cached 368 cases in 723s, 0 failed\n"}
+,{"stream_name":"stdout","time":738.061066703,"data":"\n"}
+,{"stream_name":"stdout","time":738.061070511,"data":"per-case arrays: x (4, 128, 128, 128) float16, y (128, 128, 128) uint8\n"}
+,{"stream_name":"stdout","time":738.648842769,"data":"label voxel fractions over 40 cases: {0: 0.97434, 1: 0.00342, 2: 0.01786, 3: 0.00438}\n"}
+,{"stream_name":"stdout","time":738.64887947,"data":"-\u003e the classes are extremely imbalanced, which is why the loss below is Dice-based and not plain cross-entropy\n"}
+,{"stream_name":"stdout","time":738.709812019,"data":"train 258   val 55   test 55 patients   (total 368)\n"}
+,{"stream_name":"stdout","time":738.709844602,"data":"\n"}
+,{"stream_name":"stdout","time":738.709855411,"data":"the test split is 55 patients. That is small: a per-class Dice from 55\n"}
+,{"stream_name":"stdout","time":738.70985904,"data":"cases carries a wide interval, so the per-patient spread is reported alongside the mean\n"}
+,{"stream_name":"stdout","time":738.709864115,"data":"rather than the mean alone.\n"}
+,{"stream_name":"stdout","time":738.709885148,"data":"\n"}
+,{"stream_name":"stdout","time":738.709890753,"data":"no patient appears in two splits: checked\n"}
+,{"stream_name":"stdout","time":739.252742785,"data":"device: cuda Tesla T4\n"}
+,{"stream_name":"stdout","time":739.378106808,"data":"5.65M parameters, 4 input channels, 4 output classes\n"}
+,{"stream_name":"stdout","time":739.403258109,"data":"loss: Dice over foreground classes + weighted cross-entropy\n"}
+,{"stream_name":"stdout","time":739.403317019,"data":"empty-and-correct classes are excluded from the Dice average, not scored as 1.0\n"}
+,{"stream_name":"stdout","time":745.513094009,"data":"training 60 epochs, 258 volumes, 112^3 crops, batch 2\n"}
+,{"stream_name":"stderr","time":745.514765384,"data":"/tmp/ipykernel_23/3915500998.py:36: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":745.514781402,"data":"  scaler = torch.cuda.amp.GradScaler()\n"}
+,{"stream_name":"stderr","time":745.514786264,"data":"\n"}
+,{"stream_name":"stderr","time":745.514790244,"data":"/tmp/ipykernel_23/3915500998.py:36: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":745.514795173,"data":"  scaler = torch.cuda.amp.GradScaler()\n"}
+,{"stream_name":"stderr","time":746.311733883,"data":"/tmp/ipykernel_23/3915500998.py:87: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":746.311885681,"data":"  with torch.cuda.amp.autocast():\n"}
+,{"stream_name":"stderr","time":746.31189483,"data":"\n"}
+,{"stream_name":"stderr","time":746.311906058,"data":"/tmp/ipykernel_23/3915500998.py:87: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":746.311911847,"data":"  with torch.cuda.amp.autocast():\n"}
+,{"stream_name":"stdout","time":778.952058065,"data":"  ep   1  loss 2.0466  33s\n"}
+,{"stream_name":"stdout","time":809.450164952,"data":"  ep   2  loss 1.7547  30s\n"}
+,{"stream_name":"stdout","time":840.234030034,"data":"  ep   3  loss 1.5159  31s\n"}
+,{"stream_name":"stdout","time":871.760170163,"data":"  ep   4  loss 1.3166  32s\n"}
+,{"stream_name":"stderr","time":905.492615806,"data":"/tmp/ipykernel_23/3915500998.py:50: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":905.492652012,"data":"  with torch.cuda.amp.autocast():\n"}
+,{"stream_name":"stderr","time":905.492658588,"data":"\n"}
+,{"stream_name":"stderr","time":905.492664227,"data":"/tmp/ipykernel_23/3915500998.py:50: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":905.492670384,"data":"  with torch.cuda.amp.autocast():\n"}
+,{"stream_name":"stdout","time":918.866542731,"data":"  ep   5  loss 1.1772  47s  val_fg_dice 0.4847  WH 0.689  TU 0.554  EN 0.498  \u003c- best\n"}
+,{"stream_name":"stdout","time":953.255060774,"data":"  ep   6  loss 1.0567  34s\n"}
+,{"stream_name":"stdout","time":986.653634139,"data":"  ep   7  loss 0.9494  33s\n"}
+,{"stream_name":"stdout","time":1019.998984867,"data":"  ep   8  loss 0.8825  33s\n"}
+,{"stream_name":"stdout","time":1053.883554491,"data":"  ep   9  loss 0.8284  34s\n"}
+,{"stream_name":"stdout","time":1100.294455403,"data":"  ep  10  loss 0.7603  46s  val_fg_dice 0.5077  WH 0.731  TU 0.602  EN 0.546  \u003c- best\n"}
+,{"stream_name":"stdout","time":1134.490877114,"data":"  ep  11  loss 0.7131  34s\n"}
+,{"stream_name":"stdout","time":1168.383601804,"data":"  ep  12  loss 0.6972  34s\n"}
+,{"stream_name":"stdout","time":1201.685525921,"data":"  ep  13  loss 0.6593  33s\n"}
+,{"stream_name":"stdout","time":1235.862165093,"data":"  ep  14  loss 0.6270  34s\n"}
+,{"stream_name":"stdout","time":1282.697470009,"data":"  ep  15  loss 0.6125  47s  val_fg_dice 0.5656  WH 0.778  TU 0.689  EN 0.600  \u003c- best\n"}
+,{"stream_name":"stdout","time":1317.143327772,"data":"  ep  16  loss 0.6024  34s\n"}
+,{"stream_name":"stdout","time":1351.035971706,"data":"  ep  17  loss 0.5914  34s\n"}
+,{"stream_name":"stdout","time":1384.813971913,"data":"  ep  18  loss 0.5761  34s\n"}
+,{"stream_name":"stdout","time":1418.52075436,"data":"  ep  19  loss 0.5585  34s\n"}
+,{"stream_name":"stdout","time":1465.624825489,"data":"  ep  20  loss 0.5558  47s  val_fg_dice 0.5823  WH 0.819  TU 0.701  EN 0.627  \u003c- best\n"}
+,{"stream_name":"stdout","time":1499.925263544,"data":"  ep  21  loss 0.5525  34s\n"}
+,{"stream_name":"stdout","time":1533.620411483,"data":"  ep  22  loss 0.5309  34s\n"}
+,{"stream_name":"stdout","time":1566.838553236,"data":"  ep  23  loss 0.5191  33s\n"}
+,{"stream_name":"stdout","time":1600.427452493,"data":"  ep  24  loss 0.5248  34s\n"}
+,{"stream_name":"stdout","time":1647.012589497,"data":"  ep  25  loss 0.5166  47s  val_fg_dice 0.6109  WH 0.818  TU 0.723  EN 0.627  \u003c- best\n"}
+,{"stream_name":"stdout","time":1681.330390948,"data":"  ep  26  loss 0.5184  34s\n"}
+,{"stream_name":"stdout","time":1714.988002358,"data":"  ep  27  loss 0.5149  34s\n"}
+,{"stream_name":"stdout","time":1748.123343478,"data":"  ep  28  loss 0.5060  33s\n"}
+,{"stream_name":"stdout","time":1782.085863182,"data":"  ep  29  loss 0.5072  34s\n"}
+,{"stream_name":"stdout","time":1828.433659458,"data":"  ep  30  loss 0.4941  46s  val_fg_dice 0.5951  WH 0.803  TU 0.741  EN 0.604\n"}
+,{"stream_name":"stdout","time":1862.663038901,"data":"  ep  31  loss 0.4850  34s\n"}
+,{"stream_name":"stdout","time":1896.402079529,"data":"  ep  32  loss 0.4900  34s\n"}
+,{"stream_name":"stdout","time":1929.785175562,"data":"  ep  33  loss 0.4774  33s\n"}
+,{"stream_name":"stdout","time":1963.355592978,"data":"  ep  34  loss 0.4726  34s\n"}
+,{"stream_name":"stdout","time":2009.93313728,"data":"  ep  35  loss 0.4763  47s  val_fg_dice 0.6092  WH 0.827  TU 0.750  EN 0.625\n"}
+,{"stream_name":"stdout","time":2044.39036804,"data":"  ep  36  loss 0.4797  34s\n"}
+,{"stream_name":"stdout","time":2078.402541632,"data":"  ep  37  loss 0.4713  34s\n"}
+,{"stream_name":"stdout","time":2111.538618815,"data":"  ep  38  loss 0.4661  33s\n"}
+,{"stream_name":"stdout","time":2145.201207388,"data":"  ep  39  loss 0.4533  34s\n"}
+,{"stream_name":"stdout","time":2192.039778986,"data":"  ep  40  loss 0.4589  47s  val_fg_dice 0.6280  WH 0.826  TU 0.771  EN 0.656  \u003c- best\n"}
+,{"stream_name":"stdout","time":2226.258645881,"data":"  ep  41  loss 0.4522  34s\n"}
+,{"stream_name":"stdout","time":2260.093057551,"data":"  ep  42  loss 0.4605  34s\n"}
+,{"stream_name":"stdout","time":2293.243948306,"data":"  ep  43  loss 0.4511  33s\n"}
+,{"stream_name":"stdout","time":2326.952341925,"data":"  ep  44  loss 0.4414  34s\n"}
+,{"stream_name":"stdout","time":2373.379938678,"data":"  ep  45  loss 0.4423  46s  val_fg_dice 0.6354  WH 0.842  TU 0.788  EN 0.654  \u003c- best\n"}
+,{"stream_name":"stdout","time":2408.243566146,"data":"  ep  46  loss 0.4460  35s\n"}
+,{"stream_name":"stdout","time":2442.011250935,"data":"  ep  47  loss 0.4352  34s\n"}
+,{"stream_name":"stdout","time":2474.988029366,"data":"  ep  48  loss 0.4468  33s\n"}
+,{"stream_name":"stdout","time":2508.978698777,"data":"  ep  49  loss 0.4457  34s\n"}
+,{"stream_name":"stdout","time":2555.590212489,"data":"  ep  50  loss 0.4438  47s  val_fg_dice 0.6367  WH 0.837  TU 0.788  EN 0.662  \u003c- best\n"}
+,{"stream_name":"stdout","time":2590.079363333,"data":"  ep  51  loss 0.4385  34s\n"}
+,{"stream_name":"stdout","time":2624.089759868,"data":"  ep  52  loss 0.4408  34s\n"}
+,{"stream_name":"stdout","time":2657.338465907,"data":"  ep  53  loss 0.4331  33s\n"}
+,{"stream_name":"stdout","time":2691.136743212,"data":"  ep  54  loss 0.4230  34s\n"}
+,{"stream_name":"stdout","time":2737.546563031,"data":"  ep  55  loss 0.4363  46s  val_fg_dice 0.6374  WH 0.839  TU 0.792  EN 0.660  \u003c- best\n"}
+,{"stream_name":"stdout","time":2771.957422596,"data":"  ep  56  loss 0.4338  34s\n"}
+,{"stream_name":"stdout","time":2805.59738404,"data":"  ep  57  loss 0.4302  34s\n"}
+,{"stream_name":"stdout","time":2839.002842401,"data":"  ep  58  loss 0.4375  33s\n"}
+,{"stream_name":"stdout","time":2872.877392774,"data":"  ep  59  loss 0.4251  34s\n"}
+,{"stream_name":"stdout","time":2919.169109023,"data":"  ep  60  loss 0.4266  46s  val_fg_dice 0.6369  WH 0.837  TU 0.791  EN 0.663\n"}
+,{"stream_name":"stdout","time":2919.169148207,"data":"\n"}
+,{"stream_name":"stdout","time":2919.169154639,"data":"restored the epoch with the best VALIDATION Dice (0.6374); the test patients have not been seen\n"}
+,{"stream_name":"stderr","time":2919.516831397,"data":"/tmp/ipykernel_23/3915500998.py:50: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":2919.516872001,"data":"  with torch.cuda.amp.autocast():\n"}
+,{"stream_name":"stderr","time":2919.51687721,"data":"\n"}
+,{"stream_name":"stderr","time":2919.516900702,"data":"/tmp/ipykernel_23/3915500998.py:50: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":2919.516924679,"data":"  with torch.cuda.amp.autocast():\n"}
+,{"stream_name":"stdout","time":3006.964789278,"data":"Dice per class  (held-out TEST patients in the last column)\n"}
+,{"stream_name":"stdout","time":3006.964839873,"data":"\n"}
+,{"stream_name":"stdout","time":3006.964844678,"data":"class                                 train      val     test   test n\n"}
+,{"stream_name":"stdout","time":3006.964848382,"data":"necrotic/non-enhancing core          0.6667   0.5509   0.6265       55\n"}
+,{"stream_name":"stdout","time":3006.964851756,"data":"peritumoural oedema                  0.7419   0.7012   0.7413       55\n"}
+,{"stream_name":"stdout","time":3006.964855161,"data":"enhancing tumour                     0.6943   0.6605   0.6658       55\n"}
+,{"stream_name":"stdout","time":3006.964858516,"data":"mean over foreground classes         0.7010   0.6374   0.6779\n"}
+,{"stream_name":"stdout","time":3006.964861711,"data":"\n"}
+,{"stream_name":"stdout","time":3006.964864718,"data":"BraTS composite regions (what the literature reports)\n"}
+,{"stream_name":"stdout","time":3006.964867914,"data":"\n"}
+,{"stream_name":"stdout","time":3006.964870903,"data":"region                  train      val     test   test sd\n"}
+,{"stream_name":"stdout","time":3006.964874088,"data":"whole_tumour           0.8802   0.8385   0.8734    0.0746\n"}
+,{"stream_name":"stdout","time":3006.964877536,"data":"tumour_core            0.8605   0.7922   0.7993    0.2065\n"}
+,{"stream_name":"stdout","time":3006.964880774,"data":"enhancing              0.6943   0.6605   0.6658    0.2985\n"}
+,{"stream_name":"stdout","time":3006.964883912,"data":"\n"}
+,{"stream_name":"stdout","time":3006.964887486,"data":"per-patient whole-tumour Dice on test, sorted: 0.595, 0.626, 0.632, 0.767, 0.781, 0.790, 0.813, 0.818, 0.824, 0.827, 0.828, 0.839, 0.859, 0.870, 0.871, 0.872, 0.873, 0.876, 0.877, 0.877, 0.878, 0.881, 0.882, 0.883, 0.887, 0.891, 0.892, 0.892, 0.893, 0.895, 0.895, 0.896, 0.901, 0.902, 0.902, 0.907, 0.908, 0.913, 0.913, 0.915, 0.916, 0.918, 0.926, 0.926, 0.928, 0.930, 0.930, 0.930, 0.930, 0.937, 0.939, 0.942, 0.945, 0.947, 0.951\n"}
+,{"stream_name":"stdout","time":3006.964903778,"data":"worst patient 0.595, median 0.892, best 0.951\n"}
+,{"stream_name":"stdout","time":3006.964906604,"data":"-\u003e the mean alone would hide this range, which is why it is printed\n"}
+,{"stream_name":"stdout","time":3006.964909457,"data":"\n"}
+,{"stream_name":"stdout","time":3006.964911941,"data":"wrote /kaggle/working/results.json\n"}
+,{"stream_name":"stderr","time":3008.139330481,"data":"/tmp/ipykernel_23/1349265023.py:10: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":3008.139371367,"data":"  with torch.no_grad(), torch.cuda.amp.autocast():\n"}
+,{"stream_name":"stderr","time":3008.139378778,"data":"\n"}
+,{"stream_name":"stderr","time":3008.13938408,"data":"/tmp/ipykernel_23/1349265023.py:10: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":3008.139390079,"data":"  with torch.no_grad(), torch.cuda.amp.autocast():\n"}
+,{"stream_name":"stderr","time":3015.641272234,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":3015.641334129,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":3015.848156898,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":3015.848183147,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":3016.732263464,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":3016.853330462,"data":"[NbConvertApp] Writing 650514 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":3019.945276741,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":3020.735971279,"data":"[NbConvertApp] Support files will be in __results___files/\n"}
+,{"stream_name":"stderr","time":3020.736011471,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":3020.736420873,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":3020.736667169,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":3020.737113692,"data":"[NbConvertApp] Writing 435843 bytes to __results__.html\n"}
+]

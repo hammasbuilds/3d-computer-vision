@@ -44,5 +44,14 @@
   "scale_sd": 0.03078,
   "shift_mean": 0.25174,
   "shift_sd": 0.09518
+ },
+ "sign_check_from_run_log": {
+  "note": "printed by the notebook but previously not persisted, so the README quoted a console line with nothing to check it against; read back from the kernel log and recorded here",
+  "spearman_vs_ground_truth_disparity": 0.9052,
+  "spearman_vs_ground_truth_depth": -0.9052
+ },
+ "derived_locally": {
+  "note": "arithmetic on values stored in this same file",
+  "edge_abs_rel_ratio_near_over_away": 1.52
  }
 }

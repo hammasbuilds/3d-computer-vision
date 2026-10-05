@@ -1,0 +1,1053 @@
+{
+ "task": "BraTS 2020 brain tumour segmentation",
+ "model": "3D U-Net, 4 channels ['flair', 't1ce', 't2', 't1'], base 16, depth 4, trained from scratch",
+ "params_millions": 5.648,
+ "grid": 128,
+ "patch": 112,
+ "epochs": 60,
+ "batch_size": 2,
+ "split": "by patient, 70/15/15, seed 0",
+ "n_patients": {
+  "train": 258,
+  "val": 55,
+  "test": 55
+ },
+ "classes": [
+  "necrotic/non-enhancing core",
+  "peritumoural oedema",
+  "enhancing tumour"
+ ],
+ "selection": "epoch chosen by validation Dice; test patients untouched",
+ "caveat_resolution": "Dice measured on a 128^3 resample of the brain-cropped volume, not the native 240x240x155 grid",
+ "train": {
+  "n_patients": 258,
+  "dice_per_class": {
+   "necrotic/non-enhancing core": 0.6667,
+   "peritumoural oedema": 0.7419,
+   "enhancing tumour": 0.6943
+  },
+  "n_scored_per_class": {
+   "necrotic/non-enhancing core": 258,
+   "peritumoural oedema": 258,
+   "enhancing tumour": 257
+  },
+  "dice_composite": {
+   "whole_tumour": 0.8802,
+   "tumour_core": 0.8605,
+   "enhancing": 0.6943
+  },
+  "composite_std": {
+   "whole_tumour": 0.0645,
+   "tumour_core": 0.1094,
+   "enhancing": 0.2537
+  },
+  "mean_foreground_dice": 0.701
+ },
+ "val": {
+  "n_patients": 55,
+  "dice_per_class": {
+   "necrotic/non-enhancing core": 0.5509,
+   "peritumoural oedema": 0.7012,
+   "enhancing tumour": 0.6605
+  },
+  "n_scored_per_class": {
+   "necrotic/non-enhancing core": 55,
+   "peritumoural oedema": 55,
+   "enhancing tumour": 54
+  },
+  "dice_composite": {
+   "whole_tumour": 0.8385,
+   "tumour_core": 0.7922,
+   "enhancing": 0.6605
+  },
+  "composite_std": {
+   "whole_tumour": 0.1286,
+   "tumour_core": 0.1882,
+   "enhancing": 0.2713
+  },
+  "mean_foreground_dice": 0.6374
+ },
+ "test": {
+  "n_patients": 55,
+  "dice_per_class": {
+   "necrotic/non-enhancing core": 0.6265,
+   "peritumoural oedema": 0.7413,
+   "enhancing tumour": 0.6658
+  },
+  "n_scored_per_class": {
+   "necrotic/non-enhancing core": 55,
+   "peritumoural oedema": 55,
+   "enhancing tumour": 55
+  },
+  "dice_composite": {
+   "whole_tumour": 0.8734,
+   "tumour_core": 0.7993,
+   "enhancing": 0.6658
+  },
+  "composite_std": {
+   "whole_tumour": 0.0746,
+   "tumour_core": 0.2065,
+   "enhancing": 0.2985
+  },
+  "per_patient": [
+   {
+    "case": "brats20_training_039",
+    "class1": 0.8624301675976649,
+    "class2": 0.8061740047748449,
+    "class3": 0.8225098962233431,
+    "whole_tumour": 0.8698828072160151,
+    "tumour_core": 0.9104302572747596,
+    "enhancing": 0.8225098962233431
+   },
+   {
+    "case": "brats20_training_054",
+    "class1": 0.7064605303572533,
+    "class2": 0.7926816838242654,
+    "class3": 0.8457617519350377,
+    "whole_tumour": 0.9075840697601013,
+    "tumour_core": 0.9234604836698901,
+    "enhancing": 0.8457617519350377
+   },
+   {
+    "case": "brats20_training_317",
+    "class1": 0.2564575645755275,
+    "class2": 0.7355034320124337,
+    "class3": 0.7491508976223316,
+    "whole_tumour": 0.8585411326030942,
+    "tumour_core": 0.673449920508637,
+    "enhancing": 0.7491508976223316
+   },
+   {
+    "case": "brats20_training_129",
+    "class1": 0.4346807264203663,
+    "class2": 0.8436131138620481,
+    "class3": 0.7224743252924859,
+    "whole_tumour": 0.8822241628883386,
+    "tumour_core": 0.7457593492708317,
+    "enhancing": 0.7224743252924859
+   },
+   {
+    "case": "brats20_training_291",
+    "class1": 0.7297180682571511,
+    "class2": 0.7795962440320507,
+    "class3": 0.04181184668982263,
+    "whole_tumour": 0.9389188220284443,
+    "tumour_core": 0.7274286850005677,
+    "enhancing": 0.04181184668982263
+   },
+   {
+    "case": "brats20_training_029",
+    "class1": 0.7236888419568026,
+    "class2": 0.8835388624055801,
+    "class3": 0.7833686440676928,
+    "whole_tumour": 0.902448918589994,
+    "tumour_core": 0.9056095448858937,
+    "enhancing": 0.7833686440676928
+   },
+   {
+    "case": "brats20_training_184",
+    "class1": 0.6966607188375946,
+    "class2": 0.7946427118423343,
+    "class3": 0.8725079398969583,
+    "whole_tumour": 0.871058426905191,
+    "tumour_core": 0.8983887094923386,
+    "enhancing": 0.8725079398969583
+   },
+   {
+    "case": "brats20_training_164",
+    "class1": 0.8929823518925133,
+    "class2": 0.6398626904097742,
+    "class3": 0.8977753136045309,
+    "whole_tumour": 0.8393465319119422,
+    "tumour_core": 0.9417130592259582,
+    "enhancing": 0.8977753136045309
+   },
+   {
+    "case": "brats20_training_152",
+    "class1": 0.8942084942084482,
+    "class2": 0.914972252547302,
+    "class3": 0.8785309317143928,
+    "whole_tumour": 0.9466531155516015,
+    "tumour_core": 0.9451987788216483,
+    "enhancing": 0.8785309317143928
+   },
+   {
+    "case": "brats20_training_245",
+    "class1": 0.16239850093690314,
+    "class2": 0.6607108134384718,
+    "class3": 0.8258644509738978,
+    "whole_tumour": 0.8913668413098675,
+    "tumour_core": 0.8609193538752902,
+    "enhancing": 0.8258644509738978
+   },
+   {
+    "case": "brats20_training_203",
+    "class1": 0.7598128940409273,
+    "class2": 0.851566010824321,
+    "class3": 0.8188306757782218,
+    "whole_tumour": 0.881352273576361,
+    "tumour_core": 0.9036324431911923,
+    "enhancing": 0.8188306757782218
+   },
+   {
+    "case": "brats20_training_032",
+    "class1": 0.7692786715100395,
+    "class2": 0.5244161358810747,
+    "class3": 0.7028045510543732,
+    "whole_tumour": 0.824155617923139,
+    "tumour_core": 0.8710420756165882,
+    "enhancing": 0.7028045510543732
+   },
+   {
+    "case": "brats20_training_033",
+    "class1": 0.6547346514047185,
+    "class2": 0.9024208539169742,
+    "class3": 0.8401138603021309,
+    "whole_tumour": 0.9302175721432618,
+    "tumour_core": 0.9348127600554497,
+    "enhancing": 0.8401138603021309
+   },
+   {
+    "case": "brats20_training_128",
+    "class1": 0.034482758620392386,
+    "class2": 0.7487987549849091,
+    "class3": 0.4794816414683373,
+    "whole_tumour": 0.7665469665469521,
+    "tumour_core": 0.5063122923584675,
+    "enhancing": 0.4794816414683373
+   },
+   {
+    "case": "brats20_training_186",
+    "class1": 0.6986635286206019,
+    "class2": 0.798352154481246,
+    "class3": 0.8944187187143737,
+    "whole_tumour": 0.8784653989176725,
+    "tumour_core": 0.9313206432071593,
+    "enhancing": 0.8944187187143737
+   },
+   {
+    "case": "brats20_training_341",
+    "class1": 0.5694444444434559,
+    "class2": 0.592165898617459,
+    "class3": 0.8938334392878899,
+    "whole_tumour": 0.8133158043008352,
+    "tumour_core": 0.909526662672168,
+    "enhancing": 0.8938334392878899
+   },
+   {
+    "case": "brats20_training_289",
+    "class1": 0.5956087982704873,
+    "class2": 0.6472734011528639,
+    "class3": 0.0,
+    "whole_tumour": 0.8757167078679288,
+    "tumour_core": 0.5777034173734055,
+    "enhancing": 0.0
+   },
+   {
+    "case": "brats20_training_332",
+    "class1": 0.062476757158783466,
+    "class2": 0.8036071828343376,
+    "class3": 0.7865050079068073,
+    "whole_tumour": 0.8922267481330491,
+    "tumour_core": 0.3274226804123261,
+    "enhancing": 0.7865050079068073
+   },
+   {
+    "case": "brats20_training_148",
+    "class1": 0.39952561669827324,
+    "class2": 0.6901947462566114,
+    "class3": 0.21892560825640606,
+    "whole_tumour": 0.6317258512348363,
+    "tumour_core": 0.3121623047080987,
+    "enhancing": 0.21892560825640606
+   },
+   {
+    "case": "brats20_training_286",
+    "class1": 0.711508189746832,
+    "class2": 0.22627883650951344,
+    "class3": 0.0,
+    "whole_tumour": 0.8177999066438252,
+    "tumour_core": 0.7152963104163717,
+    "enhancing": 0.0
+   },
+   {
+    "case": "brats20_training_339",
+    "class1": 0.8901634982112501,
+    "class2": 0.8193854362217105,
+    "class3": 0.8587068080738794,
+    "whole_tumour": 0.893348165061518,
+    "tumour_core": 0.9476494958928928,
+    "enhancing": 0.8587068080738794
+   },
+   {
+    "case": "brats20_training_178",
+    "class1": 0.8432764012508513,
+    "class2": 0.8545274070806033,
+    "class3": 0.9096691895569197,
+    "whole_tumour": 0.9417678331870274,
+    "tumour_core": 0.9594951142224393,
+    "enhancing": 0.9096691895569197
+   },
+   {
+    "case": "brats20_training_100",
+    "class1": 0.863171398669848,
+    "class2": 0.8214000871997105,
+    "class3": 0.8179812089086876,
+    "whole_tumour": 0.9264130280476134,
+    "tumour_core": 0.9314818942043921,
+    "enhancing": 0.8179812089086876
+   },
+   {
+    "case": "brats20_training_336",
+    "class1": 0.8898888633081293,
+    "class2": 0.7752843865831472,
+    "class3": 0.7758745826680028,
+    "whole_tumour": 0.9275507367250423,
+    "tumour_core": 0.928573833222976,
+    "enhancing": 0.7758745826680028
+   },
+   {
+    "case": "brats20_training_198",
+    "class1": 0.7069694708035431,
+    "class2": 0.8465353854425587,
+    "class3": 0.8323720423270623,
+    "whole_tumour": 0.9446407859725664,
+    "tumour_core": 0.8968756494630981,
+    "enhancing": 0.8323720423270623
+   },
+   {
+    "case": "brats20_training_244",
+    "class1": 0.8460679534215791,
+    "class2": 0.8747634308208562,
+    "class3": 0.7077975943591688,
+    "whole_tumour": 0.9256901055893789,
+    "tumour_core": 0.9201421312409691,
+    "enhancing": 0.7077975943591688
+   },
+   {
+    "case": "brats20_training_116",
+    "class1": 0.8640647267043229,
+    "class2": 0.860581315669243,
+    "class3": 0.8024308671180029,
+    "whole_tumour": 0.9296675521625793,
+    "tumour_core": 0.949104190529685,
+    "enhancing": 0.8024308671180029
+   },
+   {
+    "case": "brats20_training_266",
+    "class1": 0.7201688860019253,
+    "class2": 0.6535969996590383,
+    "class3": 0.0,
+    "whole_tumour": 0.8960082146065859,
+    "tumour_core": 0.7204828610160506,
+    "enhancing": 0.0
+   },
+   {
+    "case": "brats20_training_073",
+    "class1": 0.8356704645047287,
+    "class2": 0.83300491243649,
+    "class3": 0.7238772787905092,
+    "whole_tumour": 0.915715197503707,
+    "tumour_core": 0.9129730525695325,
+    "enhancing": 0.7238772787905092
+   },
+   {
+    "case": "brats20_training_334",
+    "class1": 0.0,
+    "class2": 0.9364319285212055,
+    "class3": 0.8534482758620066,
+    "whole_tumour": 0.9514660703570117,
+    "tumour_core": 0.8563058035713688,
+    "enhancing": 0.8534482758620066
+   },
+   {
+    "case": "brats20_training_026",
+    "class1": 0.5980647875472782,
+    "class2": 0.876848452184453,
+    "class3": 0.6631999717004258,
+    "whole_tumour": 0.9129175905733984,
+    "tumour_core": 0.8477860238083168,
+    "enhancing": 0.6631999717004258
+   },
+   {
+    "case": "brats20_training_166",
+    "class1": 0.8672250935661577,
+    "class2": 0.8795703305493545,
+    "class3": 0.9068002191094623,
+    "whole_tumour": 0.9176557363678562,
+    "tumour_core": 0.9527549301357527,
+    "enhancing": 0.9068002191094623
+   },
+   {
+    "case": "brats20_training_338",
+    "class1": 0.7999081445192591,
+    "class2": 0.8029034476572019,
+    "class3": 0.8670160863140752,
+    "whole_tumour": 0.894568248732933,
+    "tumour_core": 0.9462121676578081,
+    "enhancing": 0.8670160863140752
+   },
+   {
+    "case": "brats20_training_353",
+    "class1": 0.8507484377269509,
+    "class2": 0.889788145679579,
+    "class3": 0.7617752743516789,
+    "whole_tumour": 0.91339460701492,
+    "tumour_core": 0.8819420188612829,
+    "enhancing": 0.7617752743516789
+   },
+   {
+    "case": "brats20_training_175",
+    "class1": 0.7625472207231173,
+    "class2": 0.7757972508092204,
+    "class3": 0.8726109126226987,
+    "whole_tumour": 0.9148900623960335,
+    "tumour_core": 0.9122804466674356,
+    "enhancing": 0.8726109126226987
+   },
+   {
+    "case": "brats20_training_356",
+    "class1": 0.8259952173300867,
+    "class2": 0.5545477323978675,
+    "class3": 0.8003300330032673,
+    "whole_tumour": 0.8715525653535879,
+    "tumour_core": 0.8963024598262808,
+    "enhancing": 0.8003300330032673
+   },
+   {
+    "case": "brats20_training_040",
+    "class1": 0.8929616902125114,
+    "class2": 0.8978701927929686,
+    "class3": 0.8342539750358338,
+    "whole_tumour": 0.9304343158829483,
+    "tumour_core": 0.9417799708899688,
+    "enhancing": 0.8342539750358338
+   },
+   {
+    "case": "brats20_training_194",
+    "class1": 0.9448297780851962,
+    "class2": 0.5784435914053399,
+    "class3": 0.8491847567587975,
+    "whole_tumour": 0.8948880739970384,
+    "tumour_core": 0.9508910891089019,
+    "enhancing": 0.8491847567587975
+   },
+   {
+    "case": "brats20_training_315",
+    "class1": 0.9048787304741808,
+    "class2": 0.5299542142257994,
+    "class3": 0.02531645569588207,
+    "whole_tumour": 0.9067738087764265,
+    "tumour_core": 0.9074969021065394,
+    "enhancing": 0.02531645569588207
+   },
+   {
+    "case": "brats20_training_089",
+    "class1": 0.2083333333311632,
+    "class2": 0.5006665196167703,
+    "class3": 0.9297962115090703,
+    "whole_tumour": 0.5953240108332563,
+    "tumour_core": 0.932600339679944,
+    "enhancing": 0.9297962115090703
+   },
+   {
+    "case": "brats20_training_071",
+    "class1": 0.17437576749894096,
+    "class2": 0.8563584124764568,
+    "class3": 0.7707641196012777,
+    "whole_tumour": 0.8915785426770197,
+    "tumour_core": 0.6676364365970773,
+    "enhancing": 0.7707641196012777
+   },
+   {
+    "case": "brats20_training_088",
+    "class1": 0.6514356282801324,
+    "class2": 0.6821262349962978,
+    "class3": 0.7502120041457881,
+    "whole_tumour": 0.8284566838783491,
+    "tumour_core": 0.8496967946866265,
+    "enhancing": 0.7502120041457881
+   },
+   {
+    "case": "brats20_training_293",
+    "class1": 0.36483073211188677,
+    "class2": 0.6804889268581165,
+    "class3": 0.7985435143124812,
+    "whole_tumour": 0.8826224781015749,
+    "tumour_core": 0.6061393736848583,
+    "enhancing": 0.7985435143124812
+   },
+   {
+    "case": "brats20_training_243",
+    "class1": 0.7294700960643431,
+    "class2": 0.8963055714837345,
+    "class3": 0.7212060513414832,
+    "whole_tumour": 0.901375737911991,
+    "tumour_core": 0.8130580137659463,
+    "enhancing": 0.7212060513414832
+   },
+   {
+    "case": "brats20_training_278",
+    "class1": 0.11479448502398508,
+    "class2": 0.4609804140186535,
+    "class3": 0.0,
+    "whole_tumour": 0.7896016717706938,
+    "tumour_core": 0.21593243551700114,
+    "enhancing": 0.0
+   },
+   {
+    "case": "brats20_training_212",
+    "class1": 0.7415781922525022,
+    "class2": 0.7139337271377522,
+    "class3": 0.6165236337764993,
+    "whole_tumour": 0.8866660740305534,
+    "tumour_core": 0.852713413018623,
+    "enhancing": 0.6165236337764993
+   },
+   {
+    "case": "brats20_training_010",
+    "class1": 0.4557329462983226,
+    "class2": 0.7925050530800883,
+    "class3": 0.8445378151259518,
+    "whole_tumour": 0.8267834325427615,
+    "tumour_core": 0.885816139137854,
+    "enhancing": 0.8445378151259518
+   },
+   {
+    "case": "brats20_training_361",
+    "class1": 0.030531862878252013,
+    "class2": 0.3226423399766196,
+    "class3": 0.0,
+    "whole_tumour": 0.8734994128664647,
+    "tumour_core": 0.03223723158064603,
+    "enhancing": 0.0
+   },
+   {
+    "case": "brats20_training_196",
+    "class1": 0.76314860571823,
+    "class2": 0.9192362934873352,
+    "class3": 0.8953055278976123,
+    "whole_tumour": 0.9374858160361672,
+    "tumour_core": 0.9265936588398304,
+    "enhancing": 0.8953055278976123
+   },
+   {
+    "case": "brats20_training_252",
+    "class1": 0.817194398548151,
+    "class2": 0.8686744718726974,
+    "class3": 0.8021036559504453,
+    "whole_tumour": 0.929544047034975,
+    "tumour_core": 0.9285994647635928,
+    "enhancing": 0.8021036559504453
+   },
+   {
+    "case": "brats20_training_324",
+    "class1": 0.37816417306913663,
+    "class2": 0.38142632368545537,
+    "class3": 0.0,
+    "whole_tumour": 0.8770795930580395,
+    "tumour_core": 0.37812441270436875,
+    "enhancing": 0.0
+   },
+   {
+    "case": "brats20_training_193",
+    "class1": 0.6922419581273059,
+    "class2": 0.5401061692588073,
+    "class3": 0.5157035586026659,
+    "whole_tumour": 0.6261171775739264,
+    "tumour_core": 0.6979456492739172,
+    "enhancing": 0.5157035586026659
+   },
+   {
+    "case": "brats20_training_118",
+    "class1": 0.7999999999996881,
+    "class2": 0.872176236476749,
+    "class3": 0.8508352056265652,
+    "whole_tumour": 0.902037062167324,
+    "tumour_core": 0.917044211841828,
+    "enhancing": 0.8508352056265652
+   },
+   {
+    "case": "brats20_training_048",
+    "class1": 0.6528925619832013,
+    "class2": 0.7334834596720247,
+    "class3": 0.4284051222349078,
+    "whole_tumour": 0.7805534527714476,
+    "tumour_core": 0.8458192363458564,
+    "enhancing": 0.4284051222349078
+   },
+   {
+    "case": "brats20_training_173",
+    "class1": 0.3612685066715243,
+    "class2": 0.8541870565206687,
+    "class3": 0.757612939207989,
+    "whole_tumour": 0.8769856622000207,
+    "tumour_core": 0.6295273019540707,
+    "enhancing": 0.757612939207989
+   }
+  ],
+  "mean_foreground_dice": 0.6779
+ },
+ "history": [
+  {
+   "epoch": 1,
+   "train_loss": 2.046553456506064,
+   "lr": 0.0002998012825394132
+  },
+  {
+   "epoch": 2,
+   "train_loss": 1.75471699699875,
+   "lr": 0.00029920567482839963
+  },
+  {
+   "epoch": 3,
+   "train_loss": 1.5158633751462596,
+   "lr": 0.000298214809386295
+  },
+  {
+   "epoch": 4,
+   "train_loss": 1.3166476543559584,
+   "lr": 0.00029683140210640184
+  },
+  {
+   "epoch": 5,
+   "train_loss": 1.177212843137194,
+   "lr": 0.0002950592448119149,
+   "val_mean_fg_dice": 0.4847,
+   "val_composite": {
+    "whole_tumour": 0.6894,
+    "tumour_core": 0.554,
+    "enhancing": 0.4979
+   },
+   "best": true
+  },
+  {
+   "epoch": 6,
+   "train_loss": 1.0566540087840355,
+   "lr": 0.0002929031948627973
+  },
+  {
+   "epoch": 7,
+   "train_loss": 0.9493594368298849,
+   "lr": 0.00029036916184209426
+  },
+  {
+   "epoch": 8,
+   "train_loss": 0.8824776757595151,
+   "lr": 0.0002874640913581771
+  },
+  {
+   "epoch": 9,
+   "train_loss": 0.8283529817595963,
+   "lr": 0.00028419594600731334
+  },
+  {
+   "epoch": 10,
+   "train_loss": 0.7603243030318918,
+   "lr": 0.00028057368354874365,
+   "val_mean_fg_dice": 0.5077,
+   "val_composite": {
+    "whole_tumour": 0.7305,
+    "tumour_core": 0.6021,
+    "enhancing": 0.5458
+   },
+   "best": true
+  },
+  {
+   "epoch": 11,
+   "train_loss": 0.7131135352822238,
+   "lr": 0.0002766072323520865
+  },
+  {
+   "epoch": 12,
+   "train_loss": 0.69719602595004,
+   "lr": 0.00027230746418436744
+  },
+  {
+   "epoch": 13,
+   "train_loss": 0.6593034720236017,
+   "lr": 0.00026768616441126086
+  },
+  {
+   "epoch": 14,
+   "train_loss": 0.6270093467346457,
+   "lr": 0.00026275599969422225
+  },
+  {
+   "epoch": 15,
+   "train_loss": 0.6125348543011865,
+   "lr": 0.00025753048327204945,
+   "val_mean_fg_dice": 0.5656,
+   "val_composite": {
+    "whole_tumour": 0.7776,
+    "tumour_core": 0.6893,
+    "enhancing": 0.5999
+   },
+   "best": true
+  },
+  {
+   "epoch": 16,
+   "train_loss": 0.6024417692376661,
+   "lr": 0.0002520239379220345
+  },
+  {
+   "epoch": 17,
+   "train_loss": 0.5913680429144423,
+   "lr": 0.0002462514567022265
+  },
+  {
+   "epoch": 18,
+   "train_loss": 0.5760644669680632,
+   "lr": 0.00024022886158240865
+  },
+  {
+   "epoch": 19,
+   "train_loss": 0.5585247791090677,
+   "lr": 0.00023397266007717897
+  },
+  {
+   "epoch": 20,
+   "train_loss": 0.5558488556118899,
+   "lr": 0.00022750000000000003,
+   "val_mean_fg_dice": 0.5823,
+   "val_composite": {
+    "whole_tumour": 0.8188,
+    "tumour_core": 0.701,
+    "enhancing": 0.6267
+   },
+   "best": true
+  },
+  {
+   "epoch": 21,
+   "train_loss": 0.5525406351847242,
+   "lr": 0.0002208286224622343
+  },
+  {
+   "epoch": 22,
+   "train_loss": 0.5308517765167148,
+   "lr": 0.00021397681324599108
+  },
+  {
+   "epoch": 23,
+   "train_loss": 0.5191275985666024,
+   "lr": 0.0002069633526840686
+  },
+  {
+   "epoch": 24,
+   "train_loss": 0.5247815563235172,
+   "lr": 0.0001998074641843674
+  },
+  {
+   "epoch": 25,
+   "train_loss": 0.5165552332881809,
+   "lr": 0.00019252876153986553,
+   "val_mean_fg_dice": 0.6109,
+   "val_composite": {
+    "whole_tumour": 0.8175,
+    "tumour_core": 0.7231,
+    "enhancing": 0.6267
+   },
+   "best": true
+  },
+  {
+   "epoch": 26,
+   "train_loss": 0.5183930969977564,
+   "lr": 0.0001851471951685751
+  },
+  {
+   "epoch": 27,
+   "train_loss": 0.5149111604505732,
+   "lr": 0.0001776829974308335
+  },
+  {
+   "epoch": 28,
+   "train_loss": 0.5060324913771578,
+   "lr": 0.00017015662717380977
+  },
+  {
+   "epoch": 29,
+   "train_loss": 0.5072009390176728,
+   "lr": 0.00016258871365522684
+  },
+  {
+   "epoch": 30,
+   "train_loss": 0.49405645665734316,
+   "lr": 0.00015500000000000003,
+   "val_mean_fg_dice": 0.5951,
+   "val_composite": {
+    "whole_tumour": 0.8034,
+    "tumour_core": 0.741,
+    "enhancing": 0.6037
+   }
+  },
+  {
+   "epoch": 31,
+   "train_loss": 0.4850119869838389,
+   "lr": 0.00014741128634477316
+  },
+  {
+   "epoch": 32,
+   "train_loss": 0.489973659085673,
+   "lr": 0.00013984337282619026
+  },
+  {
+   "epoch": 33,
+   "train_loss": 0.4774349685325179,
+   "lr": 0.00013231700256916652
+  },
+  {
+   "epoch": 34,
+   "train_loss": 0.4726256078989931,
+   "lr": 0.0001248528048314249
+  },
+  {
+   "epoch": 35,
+   "train_loss": 0.4762781742931336,
+   "lr": 0.00011747123846013452,
+   "val_mean_fg_dice": 0.6092,
+   "val_composite": {
+    "whole_tumour": 0.8274,
+    "tumour_core": 0.7503,
+    "enhancing": 0.6255
+   }
+  },
+  {
+   "epoch": 36,
+   "train_loss": 0.4797432609768801,
+   "lr": 0.00011019253581563264
+  },
+  {
+   "epoch": 37,
+   "train_loss": 0.47126338636690335,
+   "lr": 0.00010303664731593147
+  },
+  {
+   "epoch": 38,
+   "train_loss": 0.4661468782628229,
+   "lr": 9.6023186754009e-05
+  },
+  {
+   "epoch": 39,
+   "train_loss": 0.4532707310462183,
+   "lr": 8.917137753776573e-05
+  },
+  {
+   "epoch": 40,
+   "train_loss": 0.4589054687309635,
+   "lr": 8.250000000000004e-05,
+   "val_mean_fg_dice": 0.628,
+   "val_composite": {
+    "whole_tumour": 0.8263,
+    "tumour_core": 0.7708,
+    "enhancing": 0.6559
+   },
+   "best": true
+  },
+  {
+   "epoch": 41,
+   "train_loss": 0.4522098822649135,
+   "lr": 7.602733992282113e-05
+  },
+  {
+   "epoch": 42,
+   "train_loss": 0.46048900450384894,
+   "lr": 6.977113841759143e-05
+  },
+  {
+   "epoch": 43,
+   "train_loss": 0.45111462820407955,
+   "lr": 6.374854329777362e-05
+  },
+  {
+   "epoch": 44,
+   "train_loss": 0.44136205315589905,
+   "lr": 5.797606207796563e-05
+  },
+  {
+   "epoch": 45,
+   "train_loss": 0.4423250252193259,
+   "lr": 5.246951672795064e-05,
+   "val_mean_fg_dice": 0.6354,
+   "val_composite": {
+    "whole_tumour": 0.8424,
+    "tumour_core": 0.7881,
+    "enhancing": 0.6539
+   },
+   "best": true
+  },
+  {
+   "epoch": 46,
+   "train_loss": 0.4460014137186745,
+   "lr": 4.724400030577789e-05
+  },
+  {
+   "epoch": 47,
+   "train_loss": 0.4352049439452415,
+   "lr": 4.231383558873924e-05
+  },
+  {
+   "epoch": 48,
+   "train_loss": 0.4467810610699099,
+   "lr": 3.769253581563265e-05
+  },
+  {
+   "epoch": 49,
+   "train_loss": 0.4457352566857671,
+   "lr": 3.339276764791354e-05
+  },
+  {
+   "epoch": 50,
+   "train_loss": 0.44384788415690724,
+   "lr": 2.94263164512564e-05,
+   "val_mean_fg_dice": 0.6367,
+   "val_composite": {
+    "whole_tumour": 0.8368,
+    "tumour_core": 0.7884,
+    "enhancing": 0.6617
+   },
+   "best": true
+  },
+  {
+   "epoch": 51,
+   "train_loss": 0.4384826891875082,
+   "lr": 2.5804053992686684e-05
+  },
+  {
+   "epoch": 52,
+   "train_loss": 0.44082873459010163,
+   "lr": 2.253590864182287e-05
+  },
+  {
+   "epoch": 53,
+   "train_loss": 0.43305835959523226,
+   "lr": 1.9630838157905755e-05
+  },
+  {
+   "epoch": 54,
+   "train_loss": 0.4229851284230402,
+   "lr": 1.7096805137202745e-05
+  },
+  {
+   "epoch": 55,
+   "train_loss": 0.4363457604434139,
+   "lr": 1.49407551880851e-05,
+   "val_mean_fg_dice": 0.6374,
+   "val_composite": {
+    "whole_tumour": 0.8385,
+    "tumour_core": 0.7922,
+    "enhancing": 0.6605
+   },
+   "best": true
+  },
+  {
+   "epoch": 56,
+   "train_loss": 0.43376943573009136,
+   "lr": 1.316859789359818e-05
+  },
+  {
+   "epoch": 57,
+   "train_loss": 0.4301503019970517,
+   "lr": 1.1785190613705043e-05
+  },
+  {
+   "epoch": 58,
+   "train_loss": 0.43745570554751756,
+   "lr": 1.0794325171600358e-05
+  },
+  {
+   "epoch": 59,
+   "train_loss": 0.42512965699036914,
+   "lr": 1.0198717460586795e-05
+  },
+  {
+   "epoch": 60,
+   "train_loss": 0.42656366688798564,
+   "lr": 1e-05,
+   "val_mean_fg_dice": 0.6369,
+   "val_composite": {
+    "whole_tumour": 0.8365,
+    "tumour_core": 0.7915,
+    "enhancing": 0.6631
+   }
+  }
+ ],
+ "split_fractions_actual": {
+  "train": 0.701,
+  "val": 0.149,
+  "test": 0.149
+ },
+ "derived_locally": {
+  "note": "computed from per_patient and composite_std in this same file; formula given per key",
+  "ci95_formula": "mean +- 1.96 * composite_std / sqrt(n_patients), normal approximation",
+  "ci95": {
+   "train": {
+    "whole_tumour": [
+     0.8723,
+     0.8881
+    ],
+    "tumour_core": [
+     0.8472,
+     0.8738
+    ],
+    "enhancing": [
+     0.6633,
+     0.7253
+    ]
+   },
+   "val": {
+    "whole_tumour": [
+     0.8045,
+     0.8725
+    ],
+    "tumour_core": [
+     0.7425,
+     0.8419
+    ],
+    "enhancing": [
+     0.5888,
+     0.7322
+    ]
+   },
+   "test": {
+    "whole_tumour": [
+     0.8537,
+     0.8931
+    ],
+    "tumour_core": [
+     0.7447,
+     0.8539
+    ],
+    "enhancing": [
+     0.5869,
+     0.7447
+    ]
+   }
+  },
+  "n_patients_total": 368,
+  "test_enhancing_exact_zero": {
+   "n": 6,
+   "of": 55,
+   "cases": [
+    "brats20_training_289",
+    "brats20_training_286",
+    "brats20_training_266",
+    "brats20_training_278",
+    "brats20_training_361",
+    "brats20_training_324"
+   ],
+   "mean_whole_tumour": 0.855,
+   "mean_tumour_core": 0.44,
+   "n_still_clearing_wt_bar_0_80": 5
+  },
+  "test_enhancing_nonzero": {
+   "n": 49,
+   "mean_whole_tumour": 0.8756,
+   "mean_tumour_core": 0.8433
+  },
+  "test_whole_tumour_clearing_0_80": 49,
+  "test_whole_tumour_floor": {
+   "case": "brats20_training_089",
+   "dice": 0.5953
+  }
+ }
+}
