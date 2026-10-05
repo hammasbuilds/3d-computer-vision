@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Added back once the Kaggle run produces results.json. A project with no measured
+# number is not a project yet.
+projects/volumetric-segmentation/
