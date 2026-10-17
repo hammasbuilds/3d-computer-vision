@@ -210,10 +210,59 @@ def mesh_figure():
     return p
 
 
+def comparison_figure():
+    """Sr / input points / one column per method, on four different inputs."""
+    import run as R
+    subjects = [("sphere, 2,000 points", "sphere", 2000, 0.0),
+                ("torus, 2,000 points", "torus", 2000, 0.0),
+                ("torus, 500 points", "torus", 500, 0.0),
+                ("torus, 2,000 points, noise 0.02", "torus", 2000, 0.02)]
+    methods = ["convex_hull", "alpha_shape", "hoppe", "poisson_fft"]
+    fig = plt.figure(figsize=(15, 13), dpi=110)
+    for r, (label, name, n, noise) in enumerate(subjects):
+        sh = R.SHAPES[name]
+        sp = float(np.sqrt(sh.area / n))
+        rng = np.random.default_rng(R.SEED)
+        pts = sh.sample(n, rng) + rng.normal(scale=max(noise, R.FLOOR), size=(n, 3))
+        ax = fig.add_subplot(4, 5, r * 5 + 1, projection="3d")
+        ax.scatter(pts[:, 0], pts[:, 1], pts[:, 2], s=1.2, c="#555")
+        ax.set_title(("Input\n" if r == 0 else "") + f"{n} points", fontsize=9.5)
+        ax.text2D(-0.12, 0.5, f"Sr {r + 1}\n{label}", transform=ax.transAxes,
+                  rotation=90, va="center", ha="center", fontsize=9)
+        ax.set_xticks([]); ax.set_yticks([]); ax.set_zticks([])
+        ax.view_init(elev=32, azim=-62)
+        ax.set_box_aspect((1, 1, 1 if name == "sphere" else 0.5))
+        nrm = R.orient_normals(pts, R.pca_normals(pts, 18))
+        for c, m in enumerate(methods):
+            kw = {"alpha": 4.0 * sp} if m == "alpha_shape" else {}
+            if m in R.NEEDS_NORMALS:
+                kw.update({"nrm": nrm, "n_grid": 64})
+            v, f = R.METHODS[m](pts, sh, **kw)
+            sc = R.score(v, f, sh, np.random.default_rng(1))
+            ax = fig.add_subplot(4, 5, r * 5 + c + 2, projection="3d")
+            if len(f):
+                ax.plot_trisurf(v[:, 0], v[:, 1], f, v[:, 2], color="#9ec5f4",
+                                edgecolor="#2a78d6", linewidth=0.06, shade=True)
+            ok = sc["euler_ok"]
+            head = (LAB[m] + "\n") if r == 0 else ""
+            ax.set_title(f"{head}Chamfer {sc['chamfer']:.4f}   V-E+F = {sc['euler']}",
+                         fontsize=9.5, color="#222" if ok else CRIT)
+            ax.set_xticks([]); ax.set_yticks([]); ax.set_zticks([])
+            ax.view_init(elev=32, azim=-62)
+            ax.set_box_aspect((1, 1, 1 if name == "sphere" else 0.5))
+    fig.suptitle("Four point clouds, four classical reconstructions. Red: wrong topology "
+                 "(V-E+F should be 2 for a sphere, 0 for a torus)", fontsize=12)
+    plt.tight_layout()
+    p = os.path.join(OUT, "compare_reconstructions.png")
+    plt.savefig(p, bbox_inches="tight")
+    plt.close()
+    return p
+
+
 def main():
     res = json.load(io.open(os.path.join(OUT, "results.json"), encoding="utf-8"))
     for p in (density_figure(res), noise_figure(res), alpha_and_grid_figure(res),
-              mesh_figure()):
+              mesh_figure(), comparison_figure()):
         print("wrote", os.path.relpath(p, HERE), os.path.getsize(p), "bytes")
 
 

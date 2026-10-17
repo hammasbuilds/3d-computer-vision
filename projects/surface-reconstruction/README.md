@@ -119,11 +119,11 @@ to 3.6 times less accurate. Hoppe stops improving past 64³ on the torus (0.0010
 Input: points sampled from analytic surfaces. No data files.
 Output: `results/results.json` — one row per setting, plus fitted exponents, the
 topology summary, the alpha and grid trade-offs and the degeneracy measurement — and
-four figures.
+five figures.
 
 ```
 python run.py                                      # all sweeps, writes results.json
-python figures.py                                  # four figures
+python figures.py                                  # five figures
 pytest -q                                          # 11 tests
 python ../../tools/check_readme_numbers.py .       # every README number vs results.json
 ```
@@ -137,6 +137,8 @@ python ../../tools/check_readme_numbers.py .       # every README number vs resu
 ![alpha and grid](results/alpha_and_grid.png)
 
 ![meshes](results/meshes.png)
+
+![four inputs, four methods](results/compare_reconstructions.png)
 
 ## Limitations
 
